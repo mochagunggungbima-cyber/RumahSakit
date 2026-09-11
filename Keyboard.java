@@ -1,85 +1,37 @@
 public class Keyboard {
-    private String merek;
-    private String warna;
-    private String jenisKeyboard;
-    private int jumlahTombol;
-    private String jenisKoneksi;
+    // States / Atribut
+    public String merek;
+    public String warna;
+    public String jenisKeyboard;
+    public int jumlahTombol;
+    public String jenisKoneksi;
 
-    public Keyboard(String merek, String warna, String jenisKeyboard, int jumlahTombol, String jenisKoneksi) {
-        this.merek = merek;
-        this.warna = warna;
-        this.jenisKeyboard = jenisKeyboard;
-        this.jumlahTombol = jumlahTombol;
-        this.jenisKoneksi = jenisKoneksi;
+    // Methods / Behavior
+    public void Mengetik() {
+        System.out.println("Keyboard " + merek + " sedang digunakan untuk mengetik.");
     }
 
-    public String getMerek() {
-        return merek;
+    public void menekanTombol() {
+        System.out.println("Tombol pada keyboard " + merek + " ditekan.");
     }
 
-    public void setMerek(String merek) {
-        this.merek = merek;
+    public void menghapusTeks() {
+        System.out.println("Menghapus teks menggunakan tombol Backspace/Delete.");
     }
 
-    public String getWarna() {
-        return warna;
+    public void menggunakanShortcut() {
+        System.out.println("Menjalankan kombinasi tombol shortcut pada keyboard " + merek + ".");
     }
 
-    public void setWarna(String warna) {
-        this.warna = warna;
+    public void mengirimInputKeKomputer() {
+        System.out.println("Mengirimkan sinyal input dari keyboard " + merek + " ke komputer via " + jenisKoneksi + ".");
     }
 
-    public String getJenisKeyboard() {
-        return jenisKeyboard;
-    }
-
-    public void setJenisKeyboard(String jenisKeyboard) {
-        this.jenisKeyboard = jenisKeyboard;
-    }
-
-    public int getJumlahTombol() {
-        return jumlahTombol;
-    }
-
-    public void setJumlahTombol(int jumlahTombol) {
-        this.jumlahTombol = jumlahTombol;
-    }
-
-    public String getJenisKoneksi() {
-        return jenisKoneksi;
-    }
-
-    public void setJenisKoneksi(String jenisKoneksi) {
-        this.jenisKoneksi = jenisKoneksi;
-    }
-
-    public String mengetik(String teks) {
-        return merek + ": mengetik \"" + teks + "\"";
-    }
-
-    public String menekanTombol(String tombol) {
-        return merek + ": tombol " + tombol + " ditekan";
-    }
-
-    public String menghapusTeks() {
-        return merek + ": teks dihapus";
-    }
-
-    public String menggunakanShortcut(String shortcut) {
-        return merek + ": shortcut " + shortcut + " digunakan";
-    }
-
-    public String mengirimInputKeKomputer() {
-        return merek + ": input dikirim ke komputer";
-    }
-
-    public String getInfo() {
-        String info = "";
-        info += "Merek          : " + merek + "\n";
-        info += "Warna          : " + warna + "\n";
-        info += "Jenis Keyboard : " + jenisKeyboard + "\n";
-        info += "Jumlah Tombol  : " + jumlahTombol + "\n";
-        info += "Jenis Koneksi  : " + jenisKoneksi;
-        return info;
+    public void displayInfo() {
+        System.out.println("Merek          : " + merek);
+        System.out.println("Warna          : " + warna);
+        System.out.println("Jenis Keyboard : " + jenisKeyboard);
+        System.out.println("Jumlah Tombol  : " + jumlahTombol);
+        System.out.println("Jenis Koneksi  : " + jenisKoneksi);
     }
 }
